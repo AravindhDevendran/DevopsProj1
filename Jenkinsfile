@@ -9,6 +9,7 @@ registry = "aravindhdeva5/devopsproj2"
      stage('Build') {
             steps {
                 echo 'Running build automation'
+		sh 'chmod 700 *'
                 sh './gradlew build --no-daemon'
                 archiveArtifacts artifacts: 'dist/trainSchedule.zip'
             }
